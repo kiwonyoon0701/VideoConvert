@@ -16,7 +16,7 @@ then
 fi
 MYDATE=`date "+%Y-%m-%d-%H-%M-%S"`
 SOURCE_FILE=$1
-#ffmpeg -i $SOURCE_FILE -vcodec copy -acodec copy $MYDATE.mp4
+ffmpeg -i $SOURCE_FILE -vcodec copy -acodec copy $MYDATE.mp4
 
 ubuntu@ip-10-100-1-108:/home/ubuntu/stage> ./convert.sh 4.mkv
 ffmpeg version 3.4.8-0ubuntu0.2 Copyright (c) 2000-2020 the FFmpeg developers
