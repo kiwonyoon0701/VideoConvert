@@ -1,13 +1,13 @@
 **Install ffmpeg**
 
 ```
-ubuntu@ip-10-100-1-108:/home/ubuntu/genius> sudo apt-get install ffmpeg
+ubuntu@ip-10-100-1-108:/home/ubuntu/stage> sudo apt-get install ffmpeg
 ```
 
 
 **convert.sh**
 ```
-ubuntu@ip-10-100-1-108:/home/ubuntu/genius> cat convert.sh
+ubuntu@ip-10-100-1-108:/home/ubuntu/stage> cat convert.sh
 #!/bin/bash
 if [ $# -ne 1 ]
 then
@@ -18,7 +18,7 @@ MYDATE=`date "+%Y-%m-%d-%H-%M-%S"`
 SOURCE_FILE=$1
 #ffmpeg -i $SOURCE_FILE -vcodec copy -acodec copy $MYDATE.mp4
 
-ubuntu@ip-10-100-1-108:/home/ubuntu/genius> ./convert.sh 4.mkv
+ubuntu@ip-10-100-1-108:/home/ubuntu/stage> ./convert.sh 4.mkv
 ffmpeg version 3.4.8-0ubuntu0.2 Copyright (c) 2000-2020 the FFmpeg developers
   built with gcc 7 (Ubuntu 7.5.0-3ubuntu1~18.04)
   configuration: --prefix=/usr --extra-version=0ubuntu0.2 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
@@ -58,7 +58,7 @@ Press [q] to stop, [?] for help
 frame=149955 fps=32151 q=-1.0 Lsize= 2427908kB time=01:23:23.53 bitrate=3975.1kbits/s speed=1.07e+03x
 video:2346912kB audio:78175kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.116322%
 
-ubuntu@ip-10-100-1-108:/home/ubuntu/genius> ls -alrt *.mp4
+ubuntu@ip-10-100-1-108:/home/ubuntu/stage> ls -alrt *.mp4
 -rw-rw-r-- 1 ubuntu ubuntu 1394898661 Sep  9 13:55 2.mp4
 -rw-rw-r-- 1 ubuntu ubuntu 2486177874 Sep  9 14:06 2020-09-09-14-06-27.mp4
 ```
