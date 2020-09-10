@@ -11,7 +11,7 @@ ubuntu@ip-10-100-1-108:/home/ubuntu/stage> cat convert.sh
 #!/bin/bash
 if [ $# -ne 1 ]
 then
-	echo 'convert.sh SOURCE_FILE_NAME'
+	echo 'Usage : convert.sh SOURCE_FILE_NAME'
 	exit
 fi
 MYDATE=`date "+%Y-%m-%d-%H-%M-%S"`
