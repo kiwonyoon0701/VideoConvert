@@ -4,8 +4,8 @@
 ubuntu@ip-10-100-1-108:/home/ubuntu/stage> sudo apt-get install ffmpeg
 ```
 
-
 **convert.sh**
+
 ```
 ubuntu@ip-10-100-1-108:/home/ubuntu/stage> cat convert.sh
 #!/bin/bash
@@ -61,4 +61,17 @@ video:2346912kB audio:78175kB subtitle:0kB other streams:0kB global headers:0kB 
 ubuntu@ip-10-100-1-108:/home/ubuntu/stage> ls -alrt *.mp4
 -rw-rw-r-- 1 ubuntu ubuntu 1394898661 Sep  9 13:55 2.mp4
 -rw-rw-r-- 1 ubuntu ubuntu 2486177874 Sep  9 14:06 2020-09-09-14-06-27.mp4
+```
+
+m4a to mp4 using ffmpeg
+
+```
+ffmpeg -i EKS.m4a -vcodec copy -acodec copy EKS.mp4
+
+```
+
+mov to mp4 using ffmpeg
+
+```
+ffmpeg -i MSA.mov -vcodec copy -acodec copy MSA.mp4
 ```
