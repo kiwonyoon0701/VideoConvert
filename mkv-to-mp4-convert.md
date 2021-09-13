@@ -1,3 +1,11 @@
+**OS and pre-requirement**
+
+```
+ubuntu-1804
+sudo apt update
+sudo apt-get install ffmpeg
+```
+
 **Install ffmpeg**
 
 ```
@@ -74,4 +82,10 @@ mov to mp4 using ffmpeg
 
 ```
 ffmpeg -i MSA.mov -vcodec copy -acodec copy MSA.mp4
+```
+
+**mp3 to youtube**
+
+```
+ffmpeg -loop 1 -r 1 -i sumnail.png -i speech_20210912120956062.mp3 -c:a copy -shortest -c:v libx264 output.mp4
 ```
